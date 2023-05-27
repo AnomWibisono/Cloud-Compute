@@ -30,8 +30,10 @@ class NinjaInvoice {
     }
   }
   
+  // ini contoh inputnya buat masukin nama containernya apa menitnya berapa
   // Create an instance of NinjaInvoice
-  const invoice = new NinjaInvoice("MyDockerContainer", 7);
-  
+  //const invoice = new NinjaInvoice("MyDockerContainer", 7);
+      
+
   // Print the invoice
   invoice.printInvoice();
