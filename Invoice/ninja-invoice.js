@@ -23,9 +23,9 @@ class NinjaInvoice {
       console.log("          INVOICE            ");
       console.log("=============================");
       console.log("Container Name: ", this.containerName);
-      console.log("Minutes: ", this.minutes);
+      console.log("Time Used\n", this.minutes);
       console.log("-----------------------------");
-      console.log("Total Amount: ", total.toLocaleString(), " Rupiah");
+      console.log("Price\n", "Rp , total.toLocaleString(), ",00");
       console.log("=============================");
     }
   }
