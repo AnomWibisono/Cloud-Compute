@@ -1,12 +1,25 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+ 
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors: {
+      'white': '#ffffff',
+      'abyss': '#2155CD',
+      'sky': '#0AA1DD',
+      'cyan' : '#79DAE8',
+    },
     extend: {
+      fontFamily: {
+        'body':['Poppins', 'sans-serif'],
+      },
+
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -15,15 +28,4 @@ module.exports = {
     },
   },
   plugins: [],
-  
-  theme: {
-    colors: {
-      'abyss':'#2155CD',
-      'sky' : '#0AA1DD'
-    }
-  },
-
-  fontfamily: {
-    'body': 'Poppins, sans-serif'
-  }
 }
