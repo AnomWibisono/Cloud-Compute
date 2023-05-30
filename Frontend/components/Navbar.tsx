@@ -8,8 +8,8 @@ const Navbar = () => {
             <img src={Logo} alt="Logo" width = "100"/>
             <div>
                 <ul className='hiddem sm:flex'>
-                    <li className='ml-10 hover:border-b text-xl text-white font-body font-semibold'> Container List </li>
-                    <li className='ml-10 hover:border-b text-xl text-white font-body font-semibold'> Price List </li>
+                    <li className='ml-5 hover:bg-sky px-5 py-1 rounded-xl transition-all text-xl text-white font-body font-semibold'> Container List </li>
+                    <li className='ml-5 hover:bg-sky px-5 py-1 rounded-xl transition-all text-xl text-white font-body font-semibold'> Price List </li>
                 </ul>
             </div>
         </div>
