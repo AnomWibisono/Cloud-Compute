@@ -14,6 +14,7 @@ module.exports = {
       'abyss': '#2155CD',
       'sky': '#0AA1DD',
       'cyan' : '#79DAE8',
+      'gray' : '#F1F1F1',
     },
     extend: {
       fontFamily: {
