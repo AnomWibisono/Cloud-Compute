@@ -1,30 +1,31 @@
 const Docker = require('dockerode');
 
-// Membuat instance Dockerode
+// Create a Docker client
 const docker = new Docker();
 
-// Membuat kontainer baru
-docker.createContainer({ Image: 'ubuntu', Cmd: ['echo', 'Hello World'] })
-  .then((container) => {
-    // Menjalankan kontainer
-    return container.start();
-  })
-  .then((container) => {
-    // Mengambil log dari kontainer
-    return container.logs({ follow: true, stdout: true, stderr: true });
-  })
-  .then((stream) => {
-    // Mengambil output log kontainer
-    container.modem.demuxStream(stream, process.stdout, process.stderr);
-    return container.wait();
-  })
-  .then((data) => {
-    // Menampilkan kode exit dari kontainer
-    console.log('Exit code:', data.StatusCode);
-    // Menghapus kontainer setelah selesai
-    return container.remove();
-  })
-  .catch((err) => {
-    // Menangani kesalahan
-    console.error(err);
+function createContainer() {
+  // Get user input values
+  const image = document.getElementById('image').value;
+  const command = document.getElementById('command').value;
+
+  // Create a container
+  docker.createContainer({
+    Image: image,
+    Cmd: command.split(' '),  // Split the command string into an array of arguments
+  }, function (err, container) {
+    if (err) {
+      console.error('Error creating container:', err);
+      return;
+    }
+
+    // Start the container
+    container.start(function (err) {
+      if (err) {
+        console.error('Error starting container:', err);
+        return;
+      }
+
+      console.log('Container started:', container.id);
+    });
   });
+}
