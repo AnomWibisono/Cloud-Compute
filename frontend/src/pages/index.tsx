@@ -1,14 +1,16 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import Navbar from '../../components/Navbar'
-
-const inter = Inter({ subsets: ['latin'] })
+import React from 'react';
+import Navbar from '../../components/Navbar';
 
 export default function Home() {
   return (
     <div>
       <Navbar />
-      <h1 className='font-sans bg-black text-white'> Hello</h1>
+      <div className="max-w-7xl mx-auto p-4 pt-28 flex items-center">
+        <h1 className="text-4xl font-semibold font-body text-abyss mr-4">List Container</h1>
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">
+          Button
+        </button>
+      </div>
     </div>
-  )
+  );
 }
