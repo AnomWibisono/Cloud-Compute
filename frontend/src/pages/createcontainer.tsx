@@ -1,12 +1,15 @@
+import Link from 'next/link';
 import Navbar from '../../components/Navbar';
 
-export default function createcontainer(){
-    return(
-        <div>
-            <Navbar />
-            <div className='max-w-screen mx-auto pt-28 '>
-                <img src="./arrowback.svg" />
-            </div>
-        </div>
-    )
+export default function CreateContainer() {
+  return (
+    <div>
+      <Navbar />
+      <div className='max-w-screen mx-auto pt-28'>
+        <Link href="/home" passHref>
+          <img src="./arrowback.svg" alt="Go back to home" />
+        </Link>
+      </div>
+    </div>
+  );
 }
