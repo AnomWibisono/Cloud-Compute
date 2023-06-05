@@ -2,6 +2,15 @@ class NinjaInvoice {
     constructor(containerName, minutes) {
       this.containerName = containerName;
       this.minutes = minutes;
+        
+        // const date = new Date(inputDate);
+        // const minutes = date.getMinutes();
+        //console.log(minutes);
+        
+        //const now = new Date();
+        //const minutes = now.getMinutes();
+        //console.log(minutes); // Output: current minutes
+
     }
   
     calculateTotal() {
