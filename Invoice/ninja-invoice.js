@@ -34,7 +34,7 @@ class NinjaInvoice {
       console.log("Container Name: ", this.containerName);
       console.log("Time Used\n", this.minutes);
       console.log("-----------------------------");
-      console.log("Price\n", "Rp , total.toLocaleString(), ",00");
+      console.log("Price\n", "Rp" , total.toLocaleString(), ",00");
       console.log("=============================");
     }
   }
