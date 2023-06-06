@@ -17,12 +17,15 @@ class NinjaInvoice {
       const baseFee = 10000; // Initial fee for the first 5 minutes
       const additionalFee = 10000; // Fee for each additional minute
       let totalFee = baseFee;
-  
-      if (this.minutes > 5) {
-        const extraMinutes = this.minutes - 5;
-        totalFee += extraMinutes * additionalFee;
+
+      if (this.minutes > 0 ) {
+        if (this.minutes > 5) {
+          const extraMinutes = this.minutes - 5;
+          totalFee += extraMinutes * additionalFee;
+        } 
+        }else {
+          totalFee = 0
       }
-  
       return totalFee;
     }
   
@@ -41,15 +44,17 @@ class NinjaInvoice {
   
   // ini contoh inputnya buat masukin nama containernya apa menitnya berapa
   // Create an instance of NinjaInvoice
+  const prompt = require("prompt-sync")();
+
   const start = new Date();
-  
   const finish = new Date();
   
-  const differenceInMilliseconds = finishTime.getTime() - startTime.getTime();
+  const differenceInMilliseconds = finish.getTime() - start.getTime();
   const differenceInMinutes = Math.floor(differenceInMilliseconds / (1000 * 60));
 
-  const invoice = new NinjaInvoice("MyDockerContainer", );
+  const invoice = new NinjaInvoice("MyDockerContainer", differenceInMinutes );
       
 
   // Print the invoice
   invoice.printInvoice();
+
