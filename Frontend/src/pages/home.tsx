@@ -28,8 +28,10 @@ export default function Home() {
               <td className="border px-4 py-2">2 hours</td>
               <td className="border px-4 py-2">2023-06-01 09:30 AM</td>
               <td className="border px-4 py-2">
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit</button>
-                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded ml-2">Delete</button>
+                <button className="bg-abyss hover:bg-sky text-white font-bold py-2 px-4 rounded">Start</button>
+                <button className="bg-abyss hover:bg-sky text-white font-bold py-2 px-4 rounded ml-2">Stop</button>
+                <button className="bg-abyss hover:bg-sky text-white font-bold py-2 px-4 rounded ml-2">Delete</button>
+                <button className="bg-abyss hover:bg-sky text-white font-bold py-2 px-4 rounded ml-2">Billing</button>
               </td>
             </tr>
             <tr>
@@ -37,9 +39,11 @@ export default function Home() {
               <td className="border px-4 py-2">Profile Image Here</td>
               <td className="border px-4 py-2">1 hour</td>
               <td className="border px-4 py-2">2023-06-02 12:45 PM</td>
-              <td className="border px-4 py-2">
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit</button>
-                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded ml-2">Delete</button>
+              <td className="border px-4 py-2 flex">
+                <button className="bg-abyss hover:bg-sky text-white font-bold py-2 px-4 rounded">Start</button>
+                <button className="bg-abyss hover:bg-sky text-white font-bold py-2 px-4 rounded ml-2">Stop</button>
+                <button className="bg-abyss hover:bg-sky text-white font-bold py-2 px-4 rounded ml-2">Delete</button>
+                <button className="bg-abyss hover:bg-sky text-white font-bold py-2 px-4 rounded ml-2">Billing</button>
               </td>
             </tr>
           </tbody>

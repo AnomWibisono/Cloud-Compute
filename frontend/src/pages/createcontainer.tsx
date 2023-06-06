@@ -46,19 +46,6 @@ export default function CreateContainer() {
                       onChange={(e) => setName(e.target.value)}
                     />
                   </div>
-                  <div className="flex items-center mb-4">
-                    <label className="text-gray-700 font-bold mr-2" htmlFor="image">
-                      Image:
-                    </label>
-                    <input
-                      className="appearance-none border rounded w-48 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                      id="image"
-                      type="text"
-                      placeholder="Enter image"
-                      value={image}
-                      onChange={(e) => setImage(e.target.value)}
-                    />
-                  </div>
                   <button
                     className="bg-abyss hover:bg-sky text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-4"
                     type="submit"
