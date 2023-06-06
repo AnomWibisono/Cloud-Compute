@@ -49,8 +49,7 @@ export default function CreateContainer() {
                   <button
                     className="bg-abyss hover:bg-sky text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-4"
                     type="submit"
-                  >
-                    Create
+                  >Create
                   </button>
                 </div>
               </form>

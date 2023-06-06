@@ -23,8 +23,8 @@ export default function Home() {
           </thead>
           <tbody>
             <tr>
-              <td className="border px-4 py-2">John Doe</td>
-              <td className="border px-4 py-2">Profile Image Here</td>
+              <td className="border px-4 py-2">Container 1</td>
+              <td className="border px-4 py-2">nginx</td>
               <td className="border px-4 py-2">2 hours</td>
               <td className="border px-4 py-2">2023-06-01 09:30 AM</td>
               <td className="border px-4 py-2">
@@ -35,8 +35,8 @@ export default function Home() {
               </td>
             </tr>
             <tr>
-              <td className="border px-4 py-2">Jane Smith</td>
-              <td className="border px-4 py-2">Profile Image Here</td>
+              <td className="border px-4 py-2">Container 2</td>
+              <td className="border px-4 py-2">nginx</td>
               <td className="border px-4 py-2">1 hour</td>
               <td className="border px-4 py-2">2023-06-02 12:45 PM</td>
               <td className="border px-4 py-2 flex">
