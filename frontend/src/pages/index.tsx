@@ -60,7 +60,7 @@ export default function Home() {
                     <button className="mr-8">
                       <img src="/delete.svg" alt="Delete" />
                     </button>
-                    <Link href='/invoice' passHref>
+                    <Link href="/invoice" passHref>
                       <button>
                         <img src="/pay.svg" alt="Pay" />
                       </button>

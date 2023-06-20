@@ -13,7 +13,7 @@ export default function CreateContainer() {
     // Handle form submission logic here
     console.log('Form submitted!');
     // Navigate back to the home page
-    router.push('/home');
+    router.push('/');
   };
 
   return (
