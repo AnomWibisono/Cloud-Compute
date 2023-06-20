@@ -3,6 +3,23 @@ import Navbar from '../../components/Navbar';
 import ButtonCreate from '../../components/ButtonCreate';
 
 export default function Home() {
+  const tableData = [
+    {
+      id: 1,
+      name: 'Container 1',
+      image: 'nginx',
+      usageTime: '2 hours',
+      lastStarted: '2 hours ago',
+    },
+    {
+      id: 2,
+      name: 'Container 2',
+      image: 'nginx',
+      usageTime: '1 hour',
+      lastStarted: '3 hours ago',
+    },
+  ];
+
   return (
     <div>
       <Navbar />
@@ -22,30 +39,33 @@ export default function Home() {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td className="border px-4 py-2">Container 1</td>
-              <td className="border px-4 py-2">nginx</td>
-              <td className="border px-4 py-2">2 hours</td>
-              <td className="border px-4 py-2">2023-06-01 09:30 AM</td>
-              <td className="border px-4 py-2">
-                <button className="bg-abyss hover:bg-sky text-white font-bold py-2 px-4 rounded">Start</button>
-                <button className="bg-abyss hover:bg-sky text-white font-bold py-2 px-4 rounded ml-2">Stop</button>
-                <button className="bg-abyss hover:bg-sky text-white font-bold py-2 px-4 rounded ml-2">Delete</button>
-                <button className="bg-abyss hover:bg-sky text-white font-bold py-2 px-4 rounded ml-2">Billing</button>
-              </td>
-            </tr>
-            <tr>
-              <td className="border px-4 py-2">Container 2</td>
-              <td className="border px-4 py-2">nginx</td>
-              <td className="border px-4 py-2">1 hour</td>
-              <td className="border px-4 py-2">2023-06-02 12:45 PM</td>
-              <td className="border px-4 py-2 flex">
-                <button className="bg-abyss hover:bg-sky text-white font-bold py-2 px-4 rounded">Start</button>
-                <button className="bg-abyss hover:bg-sky text-white font-bold py-2 px-4 rounded ml-2">Stop</button>
-                <button className="bg-abyss hover:bg-sky text-white font-bold py-2 px-4 rounded ml-2">Delete</button>
-                <button className="bg-abyss hover:bg-sky text-white font-bold py-2 px-4 rounded ml-2">Billing</button>
-              </td>
-            </tr>
+            {tableData.map((item) => (
+              <tr key={item.id}>
+                <td className="border px-4 py-2">{item.name}</td>
+                <td className="border px-4 py-2">{item.image}</td>
+                <td className="border px-4 py-2">{item.usageTime}</td>
+                <td className="border px-4 py-2">{item.lastStarted}</td>
+                <td className="border py-2 flex justify-center items-center">
+                  <div className='mr-10'>
+                    <button className="mr-8">
+                      <img src="/start.svg" alt="Start" />
+                    </button>
+                    <button>
+                      <img src="/stop.svg" alt="Stop" />
+                    </button>
+                  </div>
+                  <img src='/rectangle 3.svg' className='mr-10'></img>
+                  <div>
+                    <button className="mr-8">
+                      <img src="/delete.svg" alt="Delete" />
+                    </button>
+                    <button>
+                      <img src="/pay.svg" alt="Pay" />
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>

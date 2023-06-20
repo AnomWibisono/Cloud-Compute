@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import CreateNew from '../../components/CreateNew';
 import Navbar from '../../components/Navbar';
 import BackButton from '../../components/BackButton';
 
 export default function CreateContainer() {
   const [name, setName] = useState('');
-  const [image, setImage] = useState('');
   const router = useRouter();
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -57,6 +55,7 @@ export default function CreateContainer() {
           </div>
         </div>
       </div>
+      <div className='bg-gradient-to-b'></div>
     </div>
   );
 }
