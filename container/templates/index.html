@@ -1,13 +1,26 @@
 {%extends "base.html"%}
 {% block title %}
-Dashboard
+DOCKERPILE
 {% endblock %}
 
 {% block body %}
-<h1>DOCKER</h1>
-<P>ARGHHHHHH</P>
+<h1>DOCKERPILE</h1>
+<P></P>
 
 <a href="{{url_for('containercreate')}}">Create Container</a>
+
+<h2>Container</h2>
+<ol>
+    {% for container in containers %}
+    <li>{{ container.name }} {{container.status}}</li>
+    
+        <a href="{{url_for('start_container', container_id=container.id)}}">Start</a>
+        <a href="{{url_for('stop_container', container_id=container.id)}}">Stop</a>
+        <a href="{{url_for('delete_container', container_id=container.id)}}">Delete</a>
+        <a href="#">Bill</a>
+    
+    {% endfor %}
+</ol>
 
 
 {% endblock %}
