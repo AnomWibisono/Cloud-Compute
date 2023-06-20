@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../../components/Navbar';
 import ButtonCreate from '../../components/ButtonCreate';
+import Link from 'next/link';
 
 export default function Home() {
   const tableData = [
@@ -28,7 +29,7 @@ export default function Home() {
         <ButtonCreate />
       </div>
       <div className="max-w-7xl mx-auto mt-8">
-        <table className="table-auto w-full">
+        <table className="table-auto w-full mx-auto">
           <thead>
             <tr>
               <th className="px-4 py-2">Name</th>
@@ -41,11 +42,11 @@ export default function Home() {
           <tbody>
             {tableData.map((item) => (
               <tr key={item.id}>
-                <td className="border px-4 py-2">{item.name}</td>
-                <td className="border px-4 py-2">{item.image}</td>
-                <td className="border px-4 py-2">{item.usageTime}</td>
-                <td className="border px-4 py-2">{item.lastStarted}</td>
-                <td className="border py-2 flex justify-center items-center">
+                <td className="border-2 border-darkgray px-4 py-2">{item.name}</td>
+                <td className="border-2 border-darkgray px-4 py-2 text-center">{item.image}</td>
+                <td className="border-2 border-darkgray px-4 py-2 text-center">{item.usageTime}</td>
+                <td className="border-2 border-darkgray px-4 py-2 text-center">{item.lastStarted}</td>
+                <td className="border-2 border-darkgray py-2 flex justify-center items-center">
                   <div className='mr-10'>
                     <button className="mr-8">
                       <img src="/start.svg" alt="Start" />
@@ -59,9 +60,11 @@ export default function Home() {
                     <button className="mr-8">
                       <img src="/delete.svg" alt="Delete" />
                     </button>
-                    <button>
-                      <img src="/pay.svg" alt="Pay" />
-                    </button>
+                    <Link href='/invoice' passHref>
+                      <button>
+                        <img src="/pay.svg" alt="Pay" />
+                      </button>
+                    </Link>
                   </div>
                 </td>
               </tr>
